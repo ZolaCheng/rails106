@@ -1,3 +1,12 @@
+<%= simple_form_for @group do |f| %>
+  <div class="form_group">
+    <%= f.input :title, input_html: { class: "form-control"} %>
+    <%= f.input :description, input_html: { class: "form-control"} %>
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..."} %>
+<% end %>
+
+<!-- 没有使用simple_from 之前的代码
 <%= form_for @group do |f| %>
 <div class="form-group">
   <div class="form-group string optional">
@@ -12,4 +21,4 @@
 
 </div>
 <%= f.submit "Submit", class: "btn btn-primary",data: { disable_with: "Submiting..."} %>
-<% end %>
+<% end %> -->

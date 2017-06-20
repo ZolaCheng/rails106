@@ -12,6 +12,8 @@
       </tr>
     </thead>
     <tbody>
+
+      <!-- 没有使用partial
       <% @groups.each do |group| %>
         <tr>
           <td>#</td>
@@ -26,7 +28,9 @@
             <% end %>
           </td>
         </tr>
-      <% end %>
+      <% end %> -->
+      <%= render :partial => "group_item", :collection => @groups, :as => :group %>
+
     </tbody>
   </table>
 </div>
